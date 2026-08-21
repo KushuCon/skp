@@ -1,0 +1,83 @@
+.footer {
+  background: var(--navy-deep);
+  margin-top: 120px;
+  position: relative;
+}
+
+.footer__top {
+  padding: 76px 32px 48px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footer__brandline { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.footer__mark {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--gold); color: var(--navy-deep);
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+.footer__tag {
+  color: rgba(250, 247, 240, 0.55);
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.footer__heading {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.footer__col { display: flex; flex-direction: column; gap: 12px; }
+.footer__link {
+  color: rgba(250, 247, 240, 0.7);
+  font-size: 14.5px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+.footer__link:hover { color: var(--gold-light); transform: translateX(3px); }
+
+/* perforated ticket-stub divider */
+.footer__stub {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 32px;
+}
+.footer__stub span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(250, 247, 240, 0.14);
+}
+
+.footer__bottom {
+  padding: 28px 32px 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer__copy, .footer__reg {
+  font-size: 12.5px;
+  color: rgba(250, 247, 240, 0.42);
+}
+
+@media (max-width: 860px) {
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__brand { grid-column: 1 / -1; margin-bottom: 10px; }
+}
+@media (max-width: 500px) {
+  .footer__top { grid-template-columns: 1fr; padding: 60px 24px 40px; }
+  .footer__stub span:nth-child(odd) { display: none; }
+}
