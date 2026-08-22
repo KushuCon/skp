@@ -1,9 +1,12 @@
 import { BUSINESS } from '../config';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 import './Legal.css';
+
 
 export default function PrivacyPolicy() {
   useReveal();
+    useDocumentMeta('Privacy Policy | SKP Enterprises', 'Privacy policy for SKP Enterprises travel services.');
   return (
     <div>
       <section className="legal-hero">

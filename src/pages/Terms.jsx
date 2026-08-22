@@ -1,9 +1,11 @@
 import { BUSINESS } from '../config';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 import './Legal.css';
 
 export default function Terms() {
   useReveal();
+    useDocumentMeta('Terms & Conditions | SKP Enterprises', 'Terms and conditions for booking travel services with SKP Enterprises.');
   return (
     <div>
       <section className="legal-hero">

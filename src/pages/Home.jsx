@@ -4,6 +4,7 @@ import { BUSINESS } from '../config';
 import useReveal from '../hooks/useReveal';
 import trainImg from '../assets/train.webp';
 import './Home.css';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 const SERVICES = [
   {
@@ -69,7 +70,10 @@ const STEPS = [
 
 export default function Home() {
   useReveal();
-
+  useDocumentMeta(
+    'SKP Enterprises — Flights, Trains, Visa, Passport & Holiday Packages | Jaipur',
+    'SKP Enterprises, Jaipur — flights, train reservations, bus bookings, visa assistance, passport services and holiday packages. 15+ years experience, 225+ clients served.'
+  );
   return (
     <>
       <Hero />

@@ -1,10 +1,17 @@
 import { useState } from 'react';
 import { BUSINESS } from '../config';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 import './Contact.css';
+
 
 export default function Contact() {
   useReveal();
+    useDocumentMeta(
+    'Contact Us | SKP Enterprises — Jaipur Travel Agency',
+    'Get in touch with SKP Enterprises, Vaishali Nagar, Jaipur. Call, WhatsApp or email us for flight, train, bus, visa and passport bookings.'
+  );
+  
   const [form, setForm] = useState({ name: '', phone: '', service: 'Flight Tickets', message: '' });
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));

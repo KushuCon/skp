@@ -2,6 +2,7 @@ import { BUSINESS } from '../config';
 import useReveal from '../hooks/useReveal';
 import trainImg from '../assets/train.webp';
 import './Services.css';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 const SERVICES = [
   {
@@ -80,7 +81,10 @@ const SERVICES = [
 
 export default function Services() {
   useReveal();
-
+    useDocumentMeta(
+    'Our Services — Flights, Trains, Visa, Passport & Holidays | SKP Enterprises',
+    'Complete travel services from SKP Enterprises, Jaipur: flight tickets, train reservations, bus bookings, visa assistance, passport services and holiday packages.'
+  );
   return (
     <div className="svc-page">
       <section className="svc-hero">
