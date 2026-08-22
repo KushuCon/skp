@@ -67,7 +67,62 @@ export default function Contact() {
             </a>
           </div>
 
-          
+          <form className="contact-form reveal" onSubmit={sendWhatsApp}>
+            <h3 className="contact-form__title">Send us your details</h3>
+            <p className="contact-form__note">
+              We'll open WhatsApp with your message pre-filled — just hit send there.
+            </p>
+
+            <label className="field">
+              <span>Your name</span>
+              <input
+                type="text"
+                value={form.name}
+                onChange={update('name')}
+                placeholder="e.g. Rohit Sharma"
+                required
+              />
+            </label>
+
+            <label className="field">
+              <span>Phone number</span>
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={update('phone')}
+                placeholder="e.g. 98765 43210"
+                required
+              />
+            </label>
+
+            <label className="field">
+              <span>Interested in</span>
+              <select value={form.service} onChange={update('service')}>
+                <option>Flight Tickets</option>
+                <option>Train Reservations</option>
+                <option>Bus Bookings</option>
+                <option>Visa Assistance</option>
+                <option>Passport Services</option>
+                <option>Holiday Packages</option>
+                <option>Property Rental (Vaishali Nagar)</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label className="field">
+              <span>Message</span>
+              <textarea
+                rows={4}
+                value={form.message}
+                onChange={update('message')}
+                placeholder="Tell us your dates, destination or any specific requirement"
+              />
+            </label>
+
+            <button type="submit" className="btn btn-primary contact-form__submit">
+              Send on WhatsApp
+            </button>
+          </form>
         </div>
       </section>
     </div>
